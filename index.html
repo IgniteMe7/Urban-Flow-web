@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDT Innovative Solutions | Urban Flow Ecosystem</title>
+    <style>
+        :root {
+            --primary: #0066cc;
+            --dark: #1a202c;
+            --light: #f7fafc;
+            --accent: #38a169;
+            --gray: #718096;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { background-color: white; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: bold; font-size: 1.4rem; color: var(--dark); }
+        .logo span { color: var(--primary); }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--gray); font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        
+        .hero { padding: 5rem 5%; text-align: center; background: radial-gradient(circle at top right, rgba(0,102,204,0.05), transparent), white; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2; }
+        .hero p { font-size: 1.2rem; color: var(--gray); max-width: 800px; margin: 0 auto 2.5rem; }
+        .btn-group { display: flex; justify-content: center; gap: 1rem; }
+        .btn { padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .btn-primary { background-color: var(--primary); color: white; }
+        .btn-primary:hover { background-color: #0052a3; }
+        .btn-secondary { border: 2px solid var(--gray); color: var(--gray); }
+        .btn-secondary:hover { border-color: var(--dark); color: var(--dark); }
+
+        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 3rem 5%; background-color: var(--dark); color: white; text-align: center; }
+        .metric-card h3 { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .metric-card p { color: #a0aec0; font-size: 0.95rem; }
+
+        section { padding: 5rem 5%; }
+        section h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; position: relative; padding-bottom: 1rem; }
+        section h2::after { content: ''; width: 50px; height: 3px; background-color: var(--primary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 4px solid var(--primary); }
+        .card h3 { margin-bottom: 1rem; font-size: 1.3rem; }
+
+        .impact-step { margin-bottom: 1.5rem; padding-left: 1.5rem; border-left: 3px solid var(--accent); }
+        .impact-step h4 { color: var(--dark); margin-bottom: 0.25rem; }
+
+        footer { background-color: #0d131e; color: #a0aec0; padding: 3rem 5%; text-align: center; font-size: 0.9rem; border-top: 1px solid #2d3748; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: left; max-width: 1000px; margin: 0 auto 2rem; }
+        .footer-col h4 { color: white; margin-bottom: 1rem; }
+        .footer-col p { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">IMDT <span>Innovative Solutions</span></div>
+        <nav>
+            <a href="#problem">The Problem</a>
+            <a href="#technology">Our Technology</a>
+            <a href="#impact">Social Impact</a>
+            <a href="#governance">Governance</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Engineering Climate Resilient Infrastructure for Africa’s Cities</h1>
+        <p>IMDT Innovative Solutions deploys edge-AI mechatronics and intelligent IoT networks to eliminate urban water loss while creating high-skilled digital trades for local youth.</p>
+        <div class="btn-group">
+            <a href="#technology" class="btn btn-primary">Explore Our Technology</a>
+            <a href="#governance" class="btn btn-secondary">Review Compliance</a>
+        </div>
+    </div>
+
+    <div class="metrics">
+        <div class="metric-card">
+            <h3>47%</h3>
+            <p>Average Municipal Non-Revenue Water Loss</p>
+        </div>
+        <div class="metric-card">
+            <h3>&lt; 150 ms</h3>
+            <p>Edge-AI Anomaly Detection & Isolation Latency</p>
+        </div>
+        <div class="metric-card">
+            <h3>&plusmn;10 cm</h3>
+            <p>Subsurface Leak Location Diagnostic Accuracy[cite: 1, 2]</p>
+        </div>
+    </div>
+
+    <section id="problem">
+        <h2>The Cost of Passive Infrastructure</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--gray); font-size: 1.1rem;">
+            <p>South African urban centers lose an estimated 47% of treated municipal water before it ever reaches a tap. In high-density informal settlements, unmapped pipeline networks operate under volatile, unpredictable physical conditions. Traditional acoustic detection tools are slow and cost-prohibitive, leaving municipalities blind to subsurface resource loss until a catastrophic pipe rupture causes localized flooding and total service disruption.</p>
+        </div>
+    </section>
+
+    <section id="technology" style="background-color: white;">
+        <h2>The Urban Flow Ecosystem</h2>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto; color: var(--gray);">
+            IMDT transitions passive municipal water lines into active, self-healing smart grids through a tightly integrated dual-hardware mechatronic network designed for rugged, low-resource urban environments.
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>Solar-Powered Automated Valve Node</h3>
+                <p>Operating entirely independent of the electrical grid, our surface nodes feature industrial-grade 316 stainless steel motorized ball valves controlled by ultra-low-power microcontrollers. Utilizing solid-state, silt-tolerant ultrasonic flow arrays and digital pressure transducers, the node evaluates localized hydraulic profiles locally. Upon detecting a structural line rupture, it executes an autonomous shutoff decision within milliseconds—preventing widespread property damage and conserving thousands of liters of clean water.</p>
+            </div>
+            <div class="card" style="border-top-color: var(--accent);">
+                <h3>Sub-Surface Diagnostic Crawler Robot</h3>
+                <p>To address hidden, background pinhole leaks, our IP68 hermetically sealed 4-wheel-drive mechatronic crawler traverses unmapped plumbing and tight 90&deg; pipe bends using an active, spring-loaded center articulation joint[cite: 1, 2]. Equipped with a high-sensitivity acoustic hydrophone array and spring-loaded precision odometry wheels, the crawler maps micro-fractures to a tight &plusmn;10 cm window, allowing municipal crews to execute surgical repairs instead of tearing up community roads[cite: 1, 2].</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact">
+        <h2>Empowering Community Resilience</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="text-align: center; color: var(--gray); margin-bottom: 3rem;">True urban resilience cannot be imported; it must be built and maintained from within. The Urban Flow ecosystem is structured to directly combat the local youth unemployment crisis by turning infrastructure maintenance into a highly accessible digital trade.</p>
+            
+            <div class="impact-step">
+                <h4>Tier 1: Field Maintenance Technicians</h4>
+                <p style="color: var(--gray);">Local youth trained to manage surface node physical deployment, monitor solar-charging health, and handle modular hardware part swaps.</p>
+            </div>
+            <div class="impact-step">
+                <h4>Tier 2: Mechatronic Robotic Operators</h4>
+                <p style="color: var(--gray);">Youth operators skilled in deploying sub-surface diagnostic crawlers via rugged field tablets and logging precision spatial data[cite: 1, 2].</p>
+            </div>
+            <div class="impact-step">
+                <h4>Tier 3: Data Hub Managers</h4>
+                <p style="color: var(--gray);">Technical administrators navigating our cloud infrastructure dashboards to translate edge-telemetry alerts into actionable repair schedules for municipal engineers.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="governance">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>IMDT Innovative Solutions</h4>
+                <p>Secure, transparent mechatronic infrastructure built for sustainable municipal development.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Compliance Information</h4>
+                <p><strong>CIPC Registry:</strong> Non-Affected Entity Status Status (Sec 1)</p>
+                <p><strong>B-BBEE Standing:</strong> Exempted Micro Enterprise (EME)</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Dashboard</h4>
+                <p><strong>Inquiries:</strong> info@imdt-solutions.co.za</p>
+                <p><strong>Location:</strong> Johannesburg, Gauteng, South Africa</p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: #718096;">&copy; 2026 IMDT Innovative Solutions (Pty) Ltd. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
