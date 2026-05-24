@@ -1,154 +1,673 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMDT Innovative Solutions | Urban Flow Ecosystem</title>
-    <style>
-        :root {
-            --primary: #0066cc;
-            --dark: #1a202c;
-            --light: #f7fafc;
-            --accent: #38a169;
-            --gray: #718096;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background-color: white; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .logo { font-weight: bold; font-size: 1.4rem; color: var(--dark); }
-        .logo span { color: var(--primary); }
-        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--gray); font-weight: 500; transition: color 0.3s; }
-        nav a:hover { color: var(--primary); }
-        
-        .hero { padding: 5rem 5%; text-align: center; background: radial-gradient(circle at top right, rgba(0,102,204,0.05), transparent), white; }
-        .hero h1 { font-size: 2.8rem; margin-bottom: 1.5rem; line-height: 1.2; }
-        .hero p { font-size: 1.2rem; color: var(--gray); max-width: 800px; margin: 0 auto 2.5rem; }
-        .btn-group { display: flex; justify-content: center; gap: 1rem; }
-        .btn { padding: 0.8rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
-        .btn-primary { background-color: var(--primary); color: white; }
-        .btn-primary:hover { background-color: #0052a3; }
-        .btn-secondary { border: 2px solid var(--gray); color: var(--gray); }
-        .btn-secondary:hover { border-color: var(--dark); color: var(--dark); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Urban Flow: AI-powered water resilience and sub-surface diagnostics for Africa's cities. Smart infrastructure that stops leaks before they happen.">
+  <meta name="keywords" content="water infrastructure, AI, IoT, South Africa, urban resilience, water conservation, smart city">
+  <meta property="og:title" content="Urban Flow | IMDT Innovative Solutions">
+  <meta property="og:description" content="Engineering the Self-Healing City with anticipatory AI-powered water resilience">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#072e6e">
+  <title>Urban Flow | IMDT Innovative Solutions</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    
+    :root {
+      --primary-dark: #072e6e;
+      --primary: #1976d2;
+      --accent: #ff5252;
+      --accent-dark: #d32f2f;
+      --dark-bg: #051f4a;
+      --light-bg: #f4f7f9;
+      --white: #ffffff;
+      --text-dark: #333333;
+      --text-gray: #555555;
+      --text-light: #666666;
+      --border-light: rgba(255, 255, 255, 0.2);
+    }
 
-        .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 3rem 5%; background-color: var(--dark); color: white; text-align: center; }
-        .metric-card h3 { font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem; }
-        .metric-card p { color: #a0aec0; font-size: 0.95rem; }
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
 
-        section { padding: 5rem 5%; }
-        section h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; position: relative; padding-bottom: 1rem; }
-        section h2::after { content: ''; width: 50px; height: 3px; background-color: var(--primary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
-        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); border-top: 4px solid var(--primary); }
-        .card h3 { margin-bottom: 1rem; font-size: 1.3rem; }
+    body { 
+      font-family: 'Segoe UI', Roboto, sans-serif; 
+      background: var(--light-bg); 
+      color: var(--text-dark); 
+      line-height: 1.6;
+    }
 
-        .impact-step { margin-bottom: 1.5rem; padding-left: 1.5rem; border-left: 3px solid var(--accent); }
-        .impact-step h4 { color: var(--dark); margin-bottom: 0.25rem; }
+    /* Header & Navigation */
+    header { 
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary)); 
+      color: var(--white); 
+      padding: 3rem 2rem; 
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        footer { background-color: #0d131e; color: #a0aec0; padding: 3rem 5%; text-align: center; font-size: 0.9rem; border-top: 1px solid #2d3748; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: left; max-width: 1000px; margin: 0 auto 2rem; }
-        .footer-col h4 { color: white; margin-bottom: 1rem; }
-        .footer-col p { margin-bottom: 0.5rem; }
-    </style>
+    header img { 
+      max-height: 90px; 
+      margin-bottom: 1rem; 
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2)); 
+      alt: "IMDT Logo";
+    }
+
+    header h1 { 
+      font-size: 2.8rem; 
+      margin: 0 0 0.5rem; 
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    header p { 
+      font-size: 1.3rem; 
+      margin-top: 0.5rem; 
+      opacity: 0.95;
+      line-height: 1.4;
+    }
+
+    nav { 
+      display: flex; 
+      justify-content: center; 
+      background: var(--dark-bg); 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a { 
+      color: var(--white); 
+      padding: 1.2rem 1.5rem; 
+      text-decoration: none; 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      font-size: 0.85rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    nav a:hover, 
+    nav a:focus { 
+      background: var(--primary); 
+      color: var(--white);
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    /* Hero Section */
+    .hero { 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+      padding: 5rem 2rem; 
+      background: var(--white); 
+      border-bottom: 5px solid var(--primary);
+    }
+
+    .hero h2 { 
+      font-size: 2.2rem; 
+      color: var(--primary-dark); 
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .hero p { 
+      max-width: 800px; 
+      font-size: 1.1rem; 
+      color: var(--text-gray);
+      margin-bottom: 2rem;
+    }
+
+    .cta-btn { 
+      background: var(--accent); 
+      color: var(--white); 
+      padding: 1rem 2rem; 
+      border: none; 
+      border-radius: 5px; 
+      font-weight: 700; 
+      cursor: pointer; 
+      margin-top: 1rem;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .cta-btn:hover, 
+    .cta-btn:focus { 
+      background: var(--accent-dark); 
+      transform: scale(1.05);
+      outline: 2px solid var(--primary-dark);
+      outline-offset: 2px;
+    }
+
+    .cta-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Features Section */
+    .features { 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+      padding: 4rem 1rem; 
+      background: var(--light-bg);
+      gap: 2rem;
+    }
+
+    .card { 
+      background: var(--white); 
+      padding: 2.5rem; 
+      border-radius: 12px; 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
+      flex: 1 1 300px; 
+      max-width: 350px; 
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 { 
+      color: #0d47a1; 
+      font-size: 1.5rem; 
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .card p { 
+      font-size: 1rem; 
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    /* Technical Specs Section */
+    .tech-specs { 
+      padding: 4rem 2rem; 
+      background: var(--primary-dark); 
+      color: var(--white); 
+      text-align: center;
+    }
+
+    .tech-specs h2 {
+      font-size: 2.2rem;
+      margin-bottom: 3rem;
+      font-weight: 700;
+    }
+
+    .specs-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 2rem; 
+      max-width: 1200px; 
+      margin: 0 auto;
+    }
+
+    .spec-item { 
+      border: 1px solid var(--border-light); 
+      padding: 1.5rem; 
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .spec-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+      border-color: #4fc3f7;
+    }
+
+    .spec-item h4 { 
+      margin: 0 0 0.5rem; 
+      color: #4fc3f7;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .spec-item p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Team Section */
+    .team { 
+      background: var(--white); 
+      padding: 5rem 2rem; 
+      text-align: center;
+    }
+
+    .team h2 {
+      font-size: 2.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 3rem;
+      font-weight: 700;
+    }
+
+    .member { 
+      margin: 2rem auto; 
+      max-width: 700px; 
+      background: #f9f9f9; 
+      padding: 2rem; 
+      border-radius: 12px; 
+      display: flex; 
+      align-items: center; 
+      text-align: left; 
+      gap: 2rem;
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .member:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transform: translateX(4px);
+    }
+
+    .member-photo { 
+      width: 120px; 
+      height: 120px; 
+      border-radius: 50%; 
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--light-bg);
+      border: 3px solid var(--primary);
+    }
+
+    .member-info h3 { 
+      margin: 0 0 0.5rem; 
+      color: #1565c0; 
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .member-info p {
+      color: var(--text-light);
+      margin: 0;
+    }
+
+    .member-info strong {
+      color: var(--primary-dark);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Dashboard Section */
+    #dashboard { 
+      display: flex; 
+      flex-wrap: wrap; 
+      align-items: center; 
+      background: #f0f4f8; 
+      padding: 5rem 2rem;
+      gap: 3rem;
+    }
+
+    #dashboard > div {
+      flex: 1 1 45%;
+      min-width: 300px;
+    }
+
+    #dashboard h2 {
+      font-size: 2.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    #dashboard p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .metrics-list {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0 0;
+    }
+
+    .metrics-list li {
+      margin: 1.2rem 0;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+    }
+
+    .highlight { 
+      color: var(--accent); 
+      font-weight: 700; 
+      font-size: 1.3rem;
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+
+    #dashboard img { 
+      max-width: 100%; 
+      border-radius: 12px; 
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    /* Footer */
+    footer { 
+      background: var(--dark-bg); 
+      color: #a0aec0; 
+      text-align: center; 
+      padding: 3rem 2rem;
+      border-top: 3px solid var(--primary);
+    }
+
+    footer a { 
+      color: #4fc3f7; 
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      color: var(--white);
+      text-decoration: underline;
+      outline: 2px solid #4fc3f7;
+      outline-offset: 2px;
+    }
+
+    footer p {
+      margin: 0.8rem 0;
+      font-size: 0.95rem;
+    }
+
+    footer strong {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 { 
+        font-size: 1.8rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      header {
+        padding: 2rem 1rem;
+      }
+
+      nav { 
+        flex-wrap: wrap;
+      }
+
+      nav a { 
+        padding: 0.8rem 1rem; 
+        font-size: 0.75rem;
+        flex: 0 1 auto;
+      }
+
+      .hero h2 { 
+        font-size: 1.6rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero {
+        padding: 3rem 1rem;
+      }
+
+      .card { 
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .member { 
+        flex-direction: column; 
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .member-info h3 {
+        font-size: 1.2rem;
+      }
+
+      #dashboard { 
+        flex-direction: column;
+        padding: 3rem 1rem;
+      }
+
+      #dashboard > div {
+        flex: 1 1 100%;
+        min-width: auto;
+      }
+
+      .tech-specs {
+        padding: 3rem 1rem;
+      }
+
+      .tech-specs h2 {
+        font-size: 1.6rem;
+      }
+
+      .team {
+        padding: 3rem 1rem;
+      }
+
+      .team h2 {
+        font-size: 1.6rem;
+      }
+
+      .specs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 { 
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+      }
+
+      header img {
+        max-height: 70px;
+      }
+
+      nav a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.7rem;
+      }
+
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+
+      .card h3 {
+        font-size: 1.2rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
+
+      .highlight {
+        font-size: 1.1rem;
+      }
+
+      #dashboard h2 {
+        font-size: 1.5rem;
+      }
+
+      footer {
+        padding: 2rem 1rem;
+      }
+    }
+
+    /* Focus Styles for Accessibility */
+    a:focus, button:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.8rem 1rem;
+      text-decoration: none;
+      border-radius: 0 0 5px 0;
+      z-index: 2000;
+    }
+
+    .skip-link:focus {
+      top: 0;
+      outline: none;
+    }
+
+    /* Prefers Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">IMDT <span>Innovative Solutions</span></div>
-        <nav>
-            <a href="#problem">The Problem</a>
-            <a href="#technology">Our Technology</a>
-            <a href="#impact">Social Impact</a>
-            <a href="#governance">Governance</a>
-        </nav>
-    </header>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="hero">
-        <h1>Engineering Climate Resilient Infrastructure for Africa’s Cities</h1>
-        <p>IMDT Innovative Solutions deploys edge-AI mechatronics and intelligent IoT networks to eliminate urban water loss while creating high-skilled digital trades for local youth.</p>
-        <div class="btn-group">
-            <a href="#technology" class="btn btn-primary">Explore Our Technology</a>
-            <a href="#governance" class="btn btn-secondary">Review Compliance</a>
-        </div>
-    </div>
+  <header role="banner">
+    <img src="company-logo.png" alt="IMDT Innovative Solutions logo">
+    <h1>URBAN FLOW</h1>
+    <p>Anticipatory AI-Powered Water Resilience & Sub-Surface Diagnostics</p>
+  </header>
 
-    <div class="metrics">
-        <div class="metric-card">
-            <h3>47%</h3>
-            <p>Average Municipal Non-Revenue Water Loss</p>
-        </div>
-        <div class="metric-card">
-            <h3>&lt; 150 ms</h3>
-            <p>Edge-AI Anomaly Detection & Isolation Latency</p>
-        </div>
-        <div class="metric-card">
-            <h3>&plusmn;10 cm</h3>
-            <p>Subsurface Leak Location Diagnostic Accuracy[cite: 1, 2]</p>
-        </div>
-    </div>
+  <nav aria-label="Main navigation">
+    <a href="#innovation">Innovation</a>
+    <a href="#impact">Impact</a>
+    <a href="#specs">Technical Specs</a>
+    <a href="#team">Team</a>
+    <a href="#dashboard">Live Data</a>
+  </nav>
 
-    <section id="problem">
-        <h2>The Cost of Passive Infrastructure</h2>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--gray); font-size: 1.1rem;">
-            <p>South African urban centers lose an estimated 47% of treated municipal water before it ever reaches a tap. In high-density informal settlements, unmapped pipeline networks operate under volatile, unpredictable physical conditions. Traditional acoustic detection tools are slow and cost-prohibitive, leaving municipalities blind to subsurface resource loss until a catastrophic pipe rupture causes localized flooding and total service disruption.</p>
-        </div>
+  <main id="main-content">
+
+    <section class="hero" id="innovation" role="region" aria-label="Innovation section">
+      <h2>Engineering the Self-Healing City</h2>
+      <p>South Africa loses 47% of treated municipal water to infrastructure failure. <strong>Urban Flow</strong> is an anticipatory mechatronic framework that converts passive pipelines into an active smart grid—safeguarding marginalised communities and conserving our most precious resource.</p>
+      <a href="#contact-form" class="cta-btn" aria-label="Request a technical brief">Request Technical Brief</a>
     </section>
 
-    <section id="technology" style="background-color: white;">
-        <h2>The Urban Flow Ecosystem</h2>
-        <div style="text-align: center; max-width: 700px; margin: 0 auto; color: var(--gray);">
-            IMDT transitions passive municipal water lines into active, self-healing smart grids through a tightly integrated dual-hardware mechatronic network designed for rugged, low-resource urban environments.
-        </div>
-        <div class="grid">
-            <div class="card">
-                <h3>Solar-Powered Automated Valve Node</h3>
-                <p>Operating entirely independent of the electrical grid, our surface nodes feature industrial-grade 316 stainless steel motorized ball valves controlled by ultra-low-power microcontrollers. Utilizing solid-state, silt-tolerant ultrasonic flow arrays and digital pressure transducers, the node evaluates localized hydraulic profiles locally. Upon detecting a structural line rupture, it executes an autonomous shutoff decision within milliseconds—preventing widespread property damage and conserving thousands of liters of clean water.</p>
-            </div>
-            <div class="card" style="border-top-color: var(--accent);">
-                <h3>Sub-Surface Diagnostic Crawler Robot</h3>
-                <p>To address hidden, background pinhole leaks, our IP68 hermetically sealed 4-wheel-drive mechatronic crawler traverses unmapped plumbing and tight 90&deg; pipe bends using an active, spring-loaded center articulation joint[cite: 1, 2]. Equipped with a high-sensitivity acoustic hydrophone array and spring-loaded precision odometry wheels, the crawler maps micro-fractures to a tight &plusmn;10 cm window, allowing municipal crews to execute surgical repairs instead of tearing up community roads[cite: 1, 2].</p>
-            </div>
-        </div>
+    <section class="features" id="impact" role="region" aria-label="Impact features">
+      <div class="card" role="article">
+        <h3>🚰 Anticipatory Isolation</h3>
+        <p>Autonomous valve nodes detect pressure drops and isolate ruptures in under 8 seconds. We stop floods before they start, protecting informal settlement infrastructure.</p>
+      </div>
+      <div class="card" role="article">
+        <h3>🤖 Precision Diagnostics</h3>
+        <p>Our sub-surface crawler pinpoints hidden leaks with ±10 cm accuracy. We enable surgical, cost-effective repairs without disruptive municipal excavations.</p>
+      </div>
+      <div class="card" role="article">
+        <h3>👩🏽‍💻 Inclusive Workforce</h3>
+        <p>We train <strong>young women and men</strong> as certified technical operators. By 2027, 50% of our field maintenance pipeline will be female-led, bridging the gender gap in South African STEM.</p>
+      </div>
     </section>
 
-    <section id="impact">
-        <h2>Empowering Community Resilience</h2>
-        <div style="max-width: 800px; margin: 0 auto;">
-            <p style="text-align: center; color: var(--gray); margin-bottom: 3rem;">True urban resilience cannot be imported; it must be built and maintained from within. The Urban Flow ecosystem is structured to directly combat the local youth unemployment crisis by turning infrastructure maintenance into a highly accessible digital trade.</p>
-            
-            <div class="impact-step">
-                <h4>Tier 1: Field Maintenance Technicians</h4>
-                <p style="color: var(--gray);">Local youth trained to manage surface node physical deployment, monitor solar-charging health, and handle modular hardware part swaps.</p>
-            </div>
-            <div class="impact-step">
-                <h4>Tier 2: Mechatronic Robotic Operators</h4>
-                <p style="color: var(--gray);">Youth operators skilled in deploying sub-surface diagnostic crawlers via rugged field tablets and logging precision spatial data[cite: 1, 2].</p>
-            </div>
-            <div class="impact-step">
-                <h4>Tier 3: Data Hub Managers</h4>
-                <p style="color: var(--gray);">Technical administrators navigating our cloud infrastructure dashboards to translate edge-telemetry alerts into actionable repair schedules for municipal engineers.</p>
-            </div>
+    <section class="tech-specs" id="specs" role="region" aria-label="Technical specifications">
+      <h2>Engineering Excellence</h2>
+      <div class="specs-grid">
+        <div class="spec-item" role="article">
+          <h4>Edge AI</h4>
+          <p>On-device TinyML processing for real-time anomaly detection without cloud latency.</p>
         </div>
+        <div class="spec-item" role="article">
+          <h4>Connectivity</h4>
+          <p>Ultra-low power LoRaWAN & GSM telemetry for deep urban penetration.</p>
+        </div>
+        <div class="spec-item" role="article">
+          <h4>Durability</h4>
+          <p><abbr title="International Protection">IP67</abbr> Waterproof & Ruggedised housing designed for harsh sub-surface environments.</p>
+        </div>
+        <div class="spec-item" role="article">
+          <h4>Power</h4>
+          <p>Solar-recharging lithium-ion backup ensures 24/7 uptime during load-shedding.</p>
+        </div>
+      </div>
     </section>
 
-    <footer id="governance">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>IMDT Innovative Solutions</h4>
-                <p>Secure, transparent mechatronic infrastructure built for sustainable municipal development.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Compliance Information</h4>
-                <p><strong>CIPC Registry:</strong> Non-Affected Entity Status Status (Sec 1)</p>
-                <p><strong>B-BBEE Standing:</strong> Exempted Micro Enterprise (EME)</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Dashboard</h4>
-                <p><strong>Inquiries:</strong> info@imdt-solutions.co.za</p>
-                <p><strong>Location:</strong> Johannesburg, Gauteng, South Africa</p>
-            </div>
+    <section class="team" id="team" role="region" aria-label="Leadership team">
+      <h2>The Leadership Team</h2>
+      <div class="member" role="article">
+        <img src="member-immaculate.jpg" alt="Immaculate Mpho Molete, Founder & Managing Director" class="member-photo">
+        <div class="member-info">
+          <h3>Immaculate Mpho Molete</h3>
+          <strong>Founder & Managing Director</strong>
+          <p>Visionary entrepreneur focused on climate-resilient urban planning and inclusive socioeconomic development for the Global South.</p>
         </div>
-        <p style="margin-top: 2rem; font-size: 0.8rem; color: #718096;">&copy; 2026 IMDT Innovative Solutions (Pty) Ltd. All Rights Reserved.</p>
-    </footer>
+      </div>
+      <div class="member" role="article">
+        <img src="member-deon.jpg" alt="Deon Tatenda Simbanegavi, Lead Mechatronics Engineer" class="member-photo">
+        <div class="member-info">
+          <h3>Deon Tatenda Simbanegavi</h3>
+          <strong>Lead Mechatronics Engineer</strong>
+          <p>Specialist in embedded firmware, autonomous robotics, and IoT hardware architecture. Architect of the Urban Flow dual-device ecosystem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" role="region" aria-label="Impact metrics and dashboard">
+      <div>
+        <h2>Measurable Impact</h2>
+        <p>Our dashboard provides real-time transparency for municipal partners and donors, proving that every drop saved strengthens urban resilience.</p>
+        <ul class="metrics-list">
+          <li><strong>System Efficiency:</strong> <span class="highlight">97.4%</span></li>
+          <li><strong>Water Conserved:</strong> <span class="highlight">41,870 Litres</span></li>
+          <li><strong>Youth Technicians:</strong> <span class="highlight">3 Certified</span></li>
+          <li><strong>Gender Parity:</strong> <span class="highlight">Active Progress</span></li>
+        </ul>
+      </div>
+      <div>
+        <img src="urban-flow-dashboard.png" alt="Urban Flow Live Dashboard showing real-time water conservation metrics and system performance indicators">
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <p><strong>IMDT INNOVATIVE SOLUTIONS (PTY) LTD</strong></p>
+    <p>205 Gold Street, Herdershof Flat Tri, Johannesburg, 2092</p>
+    <p>Reg: 2021/605939/07 | Tax: 9916720171</p>
+    <p>
+      Inquiries: <a href="mailto:info@imdt-solutions.co.za" rel="noopener noreferrer">info@imdt-solutions.co.za</a> | 
+      <a href="tel:+27814945883" rel="noopener noreferrer">+27 81 4945 883</a>
+    </p>
+    <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.8;">© 2026 IMDT Innovative Solutions. Engineered in South Africa.</p>
+  </footer>
 
 </body>
 </html>
