@@ -7,652 +7,21 @@
   <meta name="keywords" content="water infrastructure, AI, IoT, South Africa, urban resilience, water conservation, smart city">
   <meta property="og:title" content="Urban Flow | IMDT Innovative Solutions">
   <meta property="og:description" content="Engineering the Self-Healing City with anticipatory AI-powered water resilience">
+  <meta property="og:image" content="assets/urban-flow-og-image.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://urbanflow.imdt-solutions.co.za">
   <meta name="theme-color" content="#072e6e">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
   <title>Urban Flow | IMDT Innovative Solutions</title>
-  <style>
-    html { scroll-behavior: smooth; }
-    
-    :root {
-      --primary-dark: #072e6e;
-      --primary: #1976d2;
-      --accent: #ff5252;
-      --accent-dark: #d32f2f;
-      --dark-bg: #051f4a;
-      --light-bg: #f4f7f9;
-      --white: #ffffff;
-      --text-dark: #333333;
-      --text-gray: #555555;
-      --text-light: #666666;
-      --border-light: rgba(255, 255, 255, 0.2);
-    }
-
-    * { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
-    }
-
-    body { 
-      font-family: 'Segoe UI', Roboto, sans-serif; 
-      background: var(--light-bg); 
-      color: var(--text-dark); 
-      line-height: 1.6;
-    }
-
-    /* Header & Navigation */
-    header { 
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary)); 
-      color: var(--white); 
-      padding: 3rem 2rem; 
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    header img { 
-      max-height: 90px; 
-      margin-bottom: 1rem; 
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2)); 
-    }
-
-    header h1 { 
-      font-size: 2.8rem; 
-      margin: 0 0 0.5rem; 
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-
-    header p { 
-      font-size: 1.3rem; 
-      margin-top: 0.5rem; 
-      opacity: 0.95;
-      line-height: 1.4;
-    }
-
-    nav { 
-      display: flex; 
-      justify-content: center; 
-      background: var(--dark-bg); 
-      position: sticky; 
-      top: 0; 
-      z-index: 1000;
-      flex-wrap: wrap;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    nav a { 
-      color: var(--white); 
-      padding: 1.2rem 1.5rem; 
-      text-decoration: none; 
-      font-weight: 600; 
-      text-transform: uppercase; 
-      font-size: 0.85rem;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-    }
-
-    nav a:hover, 
-    nav a:focus { 
-      background: var(--primary); 
-      color: var(--white);
-      outline: 2px solid var(--accent);
-      outline-offset: -2px;
-    }
-
-    /* Hero Section */
-    .hero { 
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-      text-align: center; 
-      padding: 5rem 2rem; 
-      background: var(--white); 
-      border-bottom: 5px solid var(--primary);
-    }
-
-    .hero h2 { 
-      font-size: 2.2rem; 
-      color: var(--primary-dark); 
-      margin-bottom: 1.5rem;
-      line-height: 1.3;
-    }
-
-    .hero p { 
-      max-width: 800px; 
-      font-size: 1.1rem; 
-      color: var(--text-gray);
-      margin-bottom: 2rem;
-    }
-
-    .cta-btn { 
-      background: var(--accent); 
-      color: var(--white); 
-      padding: 1rem 2rem; 
-      border: none; 
-      border-radius: 5px; 
-      font-weight: 700; 
-      cursor: pointer; 
-      margin-top: 1rem;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    .cta-btn:hover, 
-    .cta-btn:focus { 
-      background: var(--accent-dark); 
-      transform: scale(1.05);
-      outline: 2px solid var(--primary-dark);
-      outline-offset: 2px;
-    }
-
-    .cta-btn:active {
-      transform: scale(0.98);
-    }
-
-    /* Features Section */
-    .features { 
-      display: flex; 
-      flex-wrap: wrap; 
-      justify-content: center; 
-      padding: 4rem 1rem; 
-      background: var(--light-bg);
-      gap: 2rem;
-    }
-
-    .card { 
-      background: var(--white); 
-      padding: 2.5rem; 
-      border-radius: 12px; 
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); 
-      flex: 1 1 300px; 
-      max-width: 350px; 
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-    }
-
-    .card h3 { 
-      color: #0d47a1; 
-      font-size: 1.5rem; 
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .card p { 
-      font-size: 1rem; 
-      color: var(--text-light);
-      line-height: 1.7;
-    }
-
-    /* Technical Specs Section */
-    .tech-specs { 
-      padding: 4rem 2rem; 
-      background: var(--primary-dark); 
-      color: var(--white); 
-      text-align: center;
-    }
-
-    .tech-specs h2 {
-      font-size: 2.2rem;
-      margin-bottom: 3rem;
-      font-weight: 700;
-    }
-
-    .specs-grid { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-      gap: 2rem; 
-      max-width: 1200px; 
-      margin: 0 auto;
-    }
-
-    .spec-item { 
-      border: 1px solid var(--border-light); 
-      padding: 1.5rem; 
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    .spec-item:hover {
-      background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-2px);
-      border-color: #4fc3f7;
-    }
-
-    .spec-item h4 { 
-      margin: 0 0 0.5rem; 
-      color: #4fc3f7;
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .spec-item p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* Team Section */
-    .team { 
-      background: var(--white); 
-      padding: 5rem 2rem; 
-      text-align: center;
-    }
-
-    .team h2 {
-      font-size: 2.2rem;
-      color: var(--primary-dark);
-      margin-bottom: 3rem;
-      font-weight: 700;
-    }
-
-    .member { 
-      margin: 2rem auto; 
-      max-width: 700px; 
-      background: #f9f9f9; 
-      padding: 2rem; 
-      border-radius: 12px; 
-      display: flex; 
-      align-items: center; 
-      text-align: left; 
-      gap: 2rem;
-      border-left: 4px solid var(--primary);
-      transition: all 0.3s ease;
-    }
-
-    .member:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      transform: translateX(4px);
-    }
-
-    .member-photo { 
-      width: 120px; 
-      height: 120px; 
-      border-radius: 50%; 
-      object-fit: cover;
-      flex-shrink: 0;
-      background: var(--light-bg);
-      border: 3px solid var(--primary);
-    }
-
-    .member-info h3 { 
-      margin: 0 0 0.5rem; 
-      color: #1565c0; 
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .member-info p {
-      color: var(--text-light);
-      margin: 0;
-    }
-
-    .member-info strong {
-      color: var(--primary-dark);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Dashboard Section */
-    #dashboard { 
-      display: flex; 
-      flex-wrap: wrap; 
-      align-items: center; 
-      background: #f0f4f8; 
-      padding: 5rem 2rem;
-      gap: 3rem;
-    }
-
-    #dashboard > div {
-      flex: 1 1 45%;
-      min-width: 300px;
-    }
-
-    #dashboard h2 {
-      font-size: 2.2rem;
-      color: var(--primary-dark);
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-    }
-
-    #dashboard p {
-      color: var(--text-light);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-
-    .metrics-list {
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0 0;
-    }
-
-    .metrics-list li {
-      margin: 1.2rem 0;
-      font-size: 1.05rem;
-      color: var(--text-dark);
-    }
-
-    .highlight { 
-      color: var(--accent); 
-      font-weight: 700; 
-      font-size: 1.3rem;
-      display: inline-block;
-      margin: 0 0.5rem;
-    }
-
-    #dashboard img { 
-      max-width: 100%; 
-      border-radius: 12px; 
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-      background: var(--white);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    /* Contact Form Section */
-    #contact-form {
-      background: var(--white);
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-
-    #contact-form h2 {
-      font-size: 2.2rem;
-      color: var(--primary-dark);
-      margin-bottom: 2rem;
-      font-weight: 700;
-    }
-
-    .form-container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: var(--light-bg);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-      text-align: left;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--primary-dark);
-      font-weight: 600;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-family: inherit;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-group button {
-      background: var(--accent);
-      color: var(--white);
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 5px;
-      font-weight: 700;
-      cursor: pointer;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      width: 100%;
-    }
-
-    .form-group button:hover,
-    .form-group button:focus {
-      background: var(--accent-dark);
-      transform: scale(1.02);
-      outline: 2px solid var(--primary-dark);
-      outline-offset: 2px;
-    }
-
-    /* Footer */
-    footer { 
-      background: var(--dark-bg); 
-      color: #a0aec0; 
-      text-align: center; 
-      padding: 3rem 2rem;
-      border-top: 3px solid var(--primary);
-    }
-
-    footer a { 
-      color: #4fc3f7; 
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    footer a:hover,
-    footer a:focus {
-      color: var(--white);
-      text-decoration: underline;
-      outline: 2px solid #4fc3f7;
-      outline-offset: 2px;
-    }
-
-    footer p {
-      margin: 0.8rem 0;
-      font-size: 0.95rem;
-    }
-
-    footer strong {
-      color: var(--white);
-      font-weight: 700;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header h1 { 
-        font-size: 1.8rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      header {
-        padding: 2rem 1rem;
-      }
-
-      nav { 
-        flex-wrap: wrap;
-      }
-
-      nav a { 
-        padding: 0.8rem 1rem; 
-        font-size: 0.75rem;
-        flex: 0 1 auto;
-      }
-
-      .hero h2 { 
-        font-size: 1.6rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-
-      .hero {
-        padding: 3rem 1rem;
-      }
-
-      .card { 
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-
-      .member { 
-        flex-direction: column; 
-        text-align: center;
-        gap: 1.5rem;
-      }
-
-      .member-info h3 {
-        font-size: 1.2rem;
-      }
-
-      #dashboard { 
-        flex-direction: column;
-        padding: 3rem 1rem;
-      }
-
-      #dashboard > div {
-        flex: 1 1 100%;
-        min-width: auto;
-      }
-
-      .tech-specs {
-        padding: 3rem 1rem;
-      }
-
-      .tech-specs h2 {
-        font-size: 1.6rem;
-      }
-
-      .team {
-        padding: 3rem 1rem;
-      }
-
-      .team h2 {
-        font-size: 1.6rem;
-      }
-
-      .specs-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cta-btn {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      #contact-form {
-        padding: 3rem 1rem;
-      }
-
-      #contact-form h2 {
-        font-size: 1.6rem;
-      }
-
-      .form-container {
-        padding: 1.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 { 
-        font-size: 1.4rem;
-        letter-spacing: 0.5px;
-      }
-
-      header img {
-        max-height: 70px;
-      }
-
-      nav a {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.7rem;
-      }
-
-      .hero h2 {
-        font-size: 1.3rem;
-      }
-
-      .card h3 {
-        font-size: 1.2rem;
-      }
-
-      .card p {
-        font-size: 0.95rem;
-      }
-
-      .highlight {
-        font-size: 1.1rem;
-      }
-
-      #dashboard h2 {
-        font-size: 1.5rem;
-      }
-
-      footer {
-        padding: 2rem 1rem;
-      }
-    }
-
-    /* Focus Styles for Accessibility */
-    a:focus, button:focus {
-      outline: 2px solid var(--primary);
-      outline-offset: 2px;
-    }
-
-    /* Skip Link */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: var(--primary);
-      color: var(--white);
-      padding: 0.8rem 1rem;
-      text-decoration: none;
-      border-radius: 0 0 5px 0;
-      z-index: 2000;
-    }
-
-    .skip-link:focus {
-      top: 0;
-      outline: none;
-    }
-
-    /* Prefers Reduced Motion */
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-  </style>
 </head>
 <body>
 
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header role="banner">
-    <img src="company-logo.png" alt="IMDT Innovative Solutions logo">
+    <img src="assets/company-logo.png" alt="IMDT Innovative Solutions logo" width="120" height="90" loading="lazy">
     <h1>URBAN FLOW</h1>
     <p>Anticipatory AI-Powered Water Resilience & Sub-Surface Diagnostics</p>
   </header>
@@ -670,22 +39,22 @@
 
     <section class="hero" id="innovation" role="region" aria-label="Innovation section">
       <h2>Engineering the Self-Healing City</h2>
-      <p>South Africa loses 47% of treated municipal water to infrastructure failure. <strong>Urban Flow</strong> is an anticipatory mechatronic framework that converts passive pipelines into an active smart grid—safeguarding marginalised communities and conserving our most precious resource.</p>
+      <p>South Africa loses 47% of treated municipal water to infrastructure failure. <strong>Urban Flow</strong> is an anticipatory mechatronic framework that converts passive pipelines into an intelligent, self-healing network. Our dual-sensor ecosystem—autonomous isolation nodes and sub-surface diagnostics—enables real-time rupture detection, instantaneous containment, and surgical precision repairs. The result: municipal water systems that learn, adapt, and heal themselves.</p>
       <a href="#contact-form" class="cta-btn" aria-label="Request a technical brief">Request Technical Brief</a>
     </section>
 
     <section class="features" id="impact" role="region" aria-label="Impact features">
       <div class="card" role="article">
         <h3>🚰 Anticipatory Isolation</h3>
-        <p>Autonomous valve nodes detect pressure drops and isolate ruptures in under 8 seconds. We stop floods before they start, protecting informal settlement infrastructure.</p>
+        <p>Autonomous valve nodes detect pressure drops and isolate ruptures in under 8 seconds. We stop floods before they start, protecting informal settlement infrastructure and minimizing water loss in critical urban corridors.</p>
       </div>
       <div class="card" role="article">
         <h3>🤖 Precision Diagnostics</h3>
-        <p>Our sub-surface crawler pinpoints hidden leaks with ±10 cm accuracy. We enable surgical, cost-effective repairs without disruptive municipal excavations.</p>
+        <p>Our sub-surface crawler pinpoints hidden leaks with ±10 cm accuracy. We enable surgical, cost-effective repairs without disruptive municipal excavations, saving time, money, and community disruption.</p>
       </div>
       <div class="card" role="article">
         <h3>👩🏽‍💻 Inclusive Workforce</h3>
-        <p>We train <strong>young women and men</strong> as certified technical operators. By 2027, 50% of our field maintenance pipeline will be female-led, bridging the gender gap in South African STEM.</p>
+        <p>We train <strong>young women and men</strong> as certified technical operators. By 2027, 50% of our field maintenance pipeline will be female-led, bridging the gender gap in South African STEM careers and building local economic capacity.</p>
       </div>
     </section>
 
@@ -694,19 +63,19 @@
       <div class="specs-grid">
         <div class="spec-item" role="article">
           <h4>Edge AI</h4>
-          <p>On-device TinyML processing for real-time anomaly detection without cloud latency.</p>
+          <p>On-device TinyML processing for real-time anomaly detection without cloud latency. Operates reliably in areas with limited connectivity.</p>
         </div>
         <div class="spec-item" role="article">
           <h4>Connectivity</h4>
-          <p>Ultra-low power LoRaWAN & GSM telemetry for deep urban penetration.</p>
+          <p>Ultra-low power LoRaWAN & GSM telemetry for deep urban penetration. Redundant communication ensures 99.9% uptime in challenging environments.</p>
         </div>
         <div class="spec-item" role="article">
           <h4>Durability</h4>
-          <p><abbr title="International Protection">IP67</abbr> Waterproof & Ruggedised housing designed for harsh sub-surface environments.</p>
+          <p><abbr title="International Protection">IP67</abbr> Waterproof & Ruggedised housing designed for harsh sub-surface environments. Built for 10+ years of continuous operation.</p>
         </div>
         <div class="spec-item" role="article">
           <h4>Power</h4>
-          <p>Solar-recharging lithium-ion backup ensures 24/7 uptime during load-shedding.</p>
+          <p>Solar-recharging lithium-ion backup ensures 24/7 uptime during load-shedding. Optimized for South Africa's renewable energy infrastructure.</p>
         </div>
       </div>
     </section>
@@ -714,19 +83,19 @@
     <section class="team" id="team" role="region" aria-label="Leadership team">
       <h2>The Leadership Team</h2>
       <div class="member" role="article">
-        <img src="member-immaculate.jpg" alt="Immaculate Mpho Molete, Founder & Managing Director" class="member-photo">
+        <img src="assets/member-immaculate.jpg" alt="Immaculate Mpho Molete, Founder & Managing Director" class="member-photo" width="120" height="120" loading="lazy">
         <div class="member-info">
           <h3>Immaculate Mpho Molete</h3>
           <strong>Founder & Managing Director</strong>
-          <p>Visionary entrepreneur focused on climate-resilient urban planning and inclusive socioeconomic development for the Global South.</p>
+          <p>Visionary entrepreneur focused on climate-resilient urban planning and inclusive socioeconomic development for the Global South. Combines technical expertise with deep commitment to African infrastructure innovation.</p>
         </div>
       </div>
       <div class="member" role="article">
-        <img src="member-deon.jpg" alt="Deon Tatenda Simbanegavi, Lead Mechatronics Engineer" class="member-photo">
+        <img src="assets/member-deon.jpg" alt="Deon Tatenda Simbanegavi, Lead Mechatronics Engineer" class="member-photo" width="120" height="120" loading="lazy">
         <div class="member-info">
           <h3>Deon Tatenda Simbanegavi</h3>
           <strong>Lead Mechatronics Engineer</strong>
-          <p>Specialist in embedded firmware, autonomous robotics, and IoT hardware architecture. Architect of the Urban Flow dual-device ecosystem.</p>
+          <p>Specialist in embedded firmware, autonomous robotics, and IoT hardware architecture. Architect of the Urban Flow dual-device ecosystem, bringing hardware expertise and innovation leadership to water infrastructure challenges.</p>
         </div>
       </div>
     </section>
@@ -743,20 +112,20 @@
         </ul>
       </div>
       <div>
-        <img src="urban-flow-dashboard.png" alt="Urban Flow Live Dashboard showing real-time water conservation metrics and system performance indicators">
+        <img src="assets/urban-flow-dashboard.png" alt="Urban Flow Live Dashboard showing real-time water conservation metrics and system performance indicators" width="600" height="400" loading="lazy">
       </div>
     </section>
 
     <section id="contact-form" role="region" aria-label="Contact form">
       <h2>Get in Touch</h2>
       <div class="form-container">
-        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+        <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" novalidate>
           <div class="form-group">
-            <label for="name">Full Name</label>
+            <label for="name">Full Name <span aria-label="required">*</span></label>
             <input type="text" id="name" name="name" required aria-required="true">
           </div>
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email">Email Address <span aria-label="required">*</span></label>
             <input type="email" id="email" name="email" required aria-required="true">
           </div>
           <div class="form-group">
@@ -764,11 +133,11 @@
             <input type="text" id="organization" name="organization">
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message">Message <span aria-label="required">*</span></label>
             <textarea id="message" name="message" required aria-required="true"></textarea>
           </div>
           <div class="form-group">
-            <button type="submit">Send Technical Brief Request</button>
+            <button type="submit" class="submit-btn">Send Technical Brief Request</button>
           </div>
         </form>
       </div>
@@ -787,5 +156,6 @@
     <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.8;">© 2026 IMDT Innovative Solutions. Engineered in South Africa.</p>
   </footer>
 
+  <script src="form-handler.js"></script>
 </body>
 </html>
